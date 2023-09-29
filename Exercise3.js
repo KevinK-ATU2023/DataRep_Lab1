@@ -17,6 +17,7 @@ let delete_task = (task) => {
     if(index != -1) {
         // remove element using index 
         my_arr.splice(index, 1);
+        console.log("The task " + task + " has been removed!");
         // print out number of elements to ensure it deleted
         console.log("Number of tasks: " + my_arr.length);
     }
