@@ -12,9 +12,17 @@ let list_all_tasks = () => {
 }
 
 let delete_task = (task) => {
+    // find index of task element
     let index = my_arr.indexOf(task);
-    my_arr.splice(index, 1);
-    console.log("Number of tasks: " + my_arr.length);
+    if(index != -1) {
+        // remove element using index 
+        my_arr.splice(index, 1);
+        // print out number of elements to ensure it deleted
+        console.log("Number of tasks: " + my_arr.length);
+    }
+    else {
+        console.log("The task "+ task + " couldn't be found!");
+    }
 }
 
 add_task("Graphics");
